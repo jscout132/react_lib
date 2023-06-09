@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+*{
+  background-color: rgb(234,229,218);
+} */
+
+@font-face{
+  font-family: "bobbyjones";
+  src: url("../src/assets/BobbyJones.otf") format('opentype');
+}
+
+.logo-font{
+  font-family: "bobbyjones", sans-serif;
+  color: rgb(68,67,75);
+}
+
+.light-logo-font{
+  font-family: "bobbyjones", sans-serif;
+  color: rgb(239,212,203);
+}
+
+.light-logo-color{
+  color: rgb(239,212,203);
+}
+
+.logo-color{
+  background-color: rgb(68,67,75);
+}
+
+.logo-light{
+  background-color: rgb(239,212,203);
+}
+
+.dark-border{
+  border-color: rgb(68,67,75);
+}
+
+.light-border{
+  border-color: rgb(239,212,203);
+  border-bottom-width: 3px;
+}
