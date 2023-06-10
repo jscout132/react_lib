@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 
@@ -10,7 +10,7 @@ import './App.css'
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div className="w-full">
       <Navbar/>
         <Provider store={store}>
@@ -32,7 +32,7 @@ function App() {
         </Routes>
         </Provider>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

@@ -67,7 +67,7 @@ function BookTable() {
                     getRowId={(row) => row.isbn}
                     columns={columns} 
                     checkboxSelection={true} 
-                    onRowSelectionModelChange={ (item:any) =>{
+                    onSelectionModelChange={ (item:any) =>{
                     setSelectionModel(item)
                 }}
 

@@ -32,17 +32,19 @@ export const server_calls = {
 
         return await response.json()
     },
-    update: async (isbn: string, data: any={}) =>{
+    update: async (isbn: string, data: any={}) => {
         const response = await fetch(`https://coal-alabaster-venus.glitch.me/api/books/${isbn}`,{
             method: 'POST',
             headers: {
+                'x-access-token': `Bearer ${token}`,
                 'Content-Type': 'application/json',
-                'x-access-token': `Bearer: ${token}`
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
         });
+            console.log('in update function on server.ts')
             if (!response.ok){
-                throw new Error('Failed to update data on the server')
+                throw Error('Failed to update data on the server in the update function')
             }
             return await response.json()
     },
