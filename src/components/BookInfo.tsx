@@ -34,11 +34,11 @@ function BookInfo() {
   return (
 
   <>
-      {/* {data.map(item => (
+      {data.map(item => (
         <div key={item.isbn}>
             {item.isbn}  
         </div> 
-    ))}; */}
+    ))};
 
         { bookId }
     </>

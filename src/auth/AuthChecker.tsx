@@ -27,7 +27,7 @@
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { signInWithPopup, signInWithRedirect, onAuthStateChanged } from 'firebase/auth';
+import { signInWithPopup, onAuthStateChanged } from 'firebase/auth';
 import { auth, Providers } from '../config/firebase';
 
 interface Props {
@@ -39,6 +39,7 @@ const AuthChecker =({ children }: Props) => {
 
     const signInOnClick = async () => {
       const response = await signInWithPopup(auth, Providers.google);
+      console.log(response)
   }
     
   useEffect(() => {

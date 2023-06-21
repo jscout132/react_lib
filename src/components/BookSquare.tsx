@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-
-import { Link } from "react-router-dom";
 import { Card } from "@mui/material"
 import { CardActionArea } from '@mui/material';
 import { CardContent } from '@mui/material';
@@ -35,11 +33,6 @@ function BookSquare() {
           .then(response => response.json())
           .then(data => setData(data.slice(-4,)));
       }, []);
-    
-    const bookClick = (isbn:string) => {
-        console.log(isbn)
-        window.location.href=`/book/${ isbn }`;
-    }
 
   return (
     <div className="m-5 flex flex-row flex-wrap justify-center">
@@ -63,9 +56,7 @@ function BookSquare() {
                 <Typography sx={{ mb: 1.5 }} className="light-logo-color">
                         Genre: { item.genre }
                 </Typography>
-                    <Link to={`/book/${item.isbn}`} className="logo-light dark-logo-color rounded-md p-2">
-                        See Book
-                    </Link>
+
                 
                 </CardContent>
             </CardActionArea>
