@@ -68,7 +68,7 @@ function BookTable() {
                     columns={columns} 
                     checkboxSelection={true} 
                     onSelectionModelChange={ (item:any) =>{
-                    setSelectionModel(item)
+                      setSelectionModel(item)
                 }}
 
                 />

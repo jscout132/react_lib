@@ -17,16 +17,16 @@ const AddBookForm = (props:AddBookProps) => {
     const dispatch = useDispatch();
     const store = useStore();
 
-    const onSubmit = (data: any, event: any) =>{
+    const onSubmit = (data: any) =>{
         console.log('props.isbn=', props.isbn)
         console.log('data', data)
         console.log('data isbn', data.isbn)
         if (props.isbn && props.isbn.length > 0) {
             console.log('in addbookform if- for edits')
             server_calls.update(props.isbn[0], data)
-            console.log(`Updated: ${ data.isbn } and ${ props.isbn }`)
-            setTimeout(()=>{window.location.reload()}, 10000);
-            event.target.reset()
+            console.log(`Updated: ${ data.isbn } and ${ props.isbn[0] }`)
+            // setTimeout(()=>{window.location.reload()}, 10000);
+            // event.target.reset()
         } else {
             console.log('in addbookform else- for adding books')
             console.log(data.author_fname)

@@ -1,13 +1,13 @@
 import Home from "../pages/Home"; 
 import Books from "../pages/Books";
 import Profile from "../pages/Profile";
-import SignInPage from "../pages/SignInPage";
 import SingleBook from "../pages/SingleBook";
 import Example from "../pages/Example";
 
 import bookId from "../components/BookInfo";
 
 const isbn = '9780062698190'
+
     
 interface RouteTypes {
     path: string,
@@ -36,12 +36,6 @@ const routes: RouteTypes[]= [
         protected: true
     },
     {
-        path:"/signin",
-        component:SignInPage,
-        name:"Sign In",
-        protected: false
-    },
-    {
         path:"/singlebook",
         component:SingleBook,
         name:"Single Book",
@@ -49,9 +43,9 @@ const routes: RouteTypes[]= [
     },
     {
         path:`/book/${ bookId }`,
-        component:Example,
-        name:"example",
-        protected: true
+        component:Home,
+        name:"Home",
+        protected: false
     }
 ]
 export default routes

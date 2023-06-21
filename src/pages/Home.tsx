@@ -1,11 +1,9 @@
-import SignIn from "../components/SignIn"
 import BookSquare from "../components/BookSquare"
 import HomeImage from "../components/HomeImage"
 const Home = () => {
   return (
     <>
         <div className="flex flex-row justify-center">
-            <SignIn/>
             <HomeImage/>
 
         </div>
